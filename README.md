@@ -162,7 +162,7 @@ The `span` in a fact is muted and small, and `display: block` so the label sits 
 Each `figure`:
 
 - margin `0`
-- `overflow: hidden`, so the zoom in step 17 stays inside the card
+- `overflow: hidden`, so the zoom in step 15 stays inside the card
 - card background, line border, radius about `14px`
 
 Each image:

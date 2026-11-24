@@ -514,7 +514,15 @@ textarea:focus {
   }
 }
 
-/* 15. Media queries */
+/* 15. Transitions
+   color on .logo and .footer-bar a
+   color and border-color on .site-nav a
+   background-color and transform on .button and button
+   transform on .photo-grid img
+   border-color and box-shadow on input, select and textarea
+*/
+
+/* 16. Media queries */
 
 @media (max-width: 639px) {
   .scroll-hint {
