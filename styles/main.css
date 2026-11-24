@@ -1,10 +1,6 @@
 /* Buy my car
-   Header: flexbox
-   Story, photos, form: grid
-   Specs: table with colspan and rowspan (styled here)
-   Small screens upward: media queries
-   Motion: transitions on links, images, fields and the button;
-   keyframes for the logo dot and the hero entrance.
+   Style this page in this file. Leave index.html as it is.
+   Do not use CSS variables. Write each color directly, with its name in a comment.
 
    Colors
    ink          #1c1916
@@ -17,7 +13,10 @@
    sand         #f7e1c8
    row          #fbf6ee
    price        #f8e6d4
+   white        #ffffff
 */
+
+/* 1. Base */
 
 *,
 *::before,
@@ -65,31 +64,14 @@ a {
   color: #b4531a /* orange-deep */;
 }
 
+/* 2. Page wrapper */
+
 .wrap {
   width: min(1080px, calc(100% - 2rem));
   margin-inline: auto;
 }
 
-.kicker {
-  margin: 0 0 0.35rem;
-  color: #b4531a /* orange-deep */;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.intro {
-  max-width: 40rem;
-  color: #5e564c /* muted */;
-}
-
-.note {
-  color: #5e564c /* muted */;
-  font-size: 0.9rem;
-}
-
-/* Flexbox in the header ------------------------------------------- */
+/* 3. Header */
 
 .site-header {
   position: sticky;
@@ -106,6 +88,8 @@ a {
   gap: 0.75rem;
   padding-block: 0.9rem;
 }
+
+/* 4. Logo */
 
 .logo {
   display: inline-flex;
@@ -130,6 +114,8 @@ a {
   animation: pulse 2.6s ease-in-out infinite;
 }
 
+/* 5. Navigation */
+
 .site-nav ul {
   display: flex;
   flex-wrap: wrap;
@@ -153,7 +139,28 @@ a {
   border-bottom-color: #e07a2f /* orange */;
 }
 
-/* Hero ------------------------------------------------------------- */
+/* 6. Kicker, intro and note */
+
+.kicker {
+  margin: 0 0 0.35rem;
+  color: #b4531a /* orange-deep */;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.intro {
+  max-width: 40rem;
+  color: #5e564c /* muted */;
+}
+
+.note {
+  color: #5e564c /* muted */;
+  font-size: 0.9rem;
+}
+
+/* 7. Hero */
 
 .hero {
   display: grid;
@@ -182,6 +189,8 @@ a {
   max-width: 38rem;
   font-size: 1.1rem;
 }
+
+/* 8. Price and buttons */
 
 .price {
   display: inline-flex;
@@ -247,7 +256,7 @@ button:focus-visible {
   color: #f4efe6 /* paper */;
 }
 
-/* Story grid ------------------------------------------------------- */
+/* 9. Story and facts */
 
 .block {
   padding-block: 2.75rem 0.25rem;
@@ -287,7 +296,7 @@ button:focus-visible {
   font-weight: 650;
 }
 
-/* Photo grid ------------------------------------------------------- */
+/* 10. Photo grid */
 
 .photo-grid {
   display: grid;
@@ -326,7 +335,7 @@ button:focus-visible {
   font-size: 0.95rem;
 }
 
-/* Specs table ------------------------------------------------------ */
+/* 11. Specs table */
 
 .scroll-hint {
   display: none;
@@ -377,7 +386,7 @@ button:focus-visible {
   font-weight: 600;
 }
 
-/* Offer form, also a grid ------------------------------------------ */
+/* 12. Offer form */
 
 .offer-form {
   padding: 1.25rem;
@@ -450,7 +459,7 @@ textarea:focus {
   font-weight: 400;
 }
 
-/* Footer ----------------------------------------------------------- */
+/* 13. Footer */
 
 .site-footer {
   margin-top: 3rem;
@@ -478,7 +487,7 @@ textarea:focus {
   color: #1c1916 /* ink */;
 }
 
-/* Keyframes -------------------------------------------------------- */
+/* 14. Keyframes */
 
 @keyframes rise {
   from {
@@ -505,7 +514,7 @@ textarea:focus {
   }
 }
 
-/* Media queries: wider layouts ------------------------------------- */
+/* 15. Media queries */
 
 @media (max-width: 639px) {
   .scroll-hint {
